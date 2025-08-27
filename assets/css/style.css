@@ -1,42 +1,122 @@
+/* General Styles */
 body {
-    display: flex;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
 }
 
-.sidebar {
-    width: 250px;
-    height: 100vh;
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+#sidebar {
     position: fixed;
-    top: 0;
+    top: 56px; /* Height of the navbar */
     left: 0;
+    bottom: 0;
+    width: 250px;
     background-color: #343a40;
-    color: #fff;
+    padding-top: 20px;
+    z-index: 1000;
+    transition: all 0.3s;
 }
 
-.sidebar a {
-    color: #adb5bd;
-    padding: 15px 20px;
-    text-decoration: none;
-    display: block;
+#sidebar.collapse {
+    margin-left: -250px;
 }
 
-.sidebar a:hover, .sidebar a.active {
+#sidebar.show {
+    margin-left: 0;
+}
+
+#content {
+    transition: all 0.3s;
+}
+
+#content.active {
+    margin-left: 250px;
+}
+
+/* Sidebar Links */
+#sidebar .nav-link {
     color: #fff;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+#sidebar .nav-link:hover {
     background-color: #495057;
 }
 
-.sidebar a i {
+#sidebar .nav-link.active {
+    background-color: #007bff;
+}
+
+#sidebar .nav-link i {
     margin-right: 10px;
 }
 
-.main-content {
-    margin-left: 250px;
-    padding: 20px;
-    width: calc(100% - 250px);
+/* Dropdown */
+#sidebar .collapse-inner a {
+    color: #333;
+}
+
+/* Content */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #007bff;
+    color: #fff;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
 }
 
 /* Themes */
-.theme-corporate-blue .sidebar { background-color: #004085; }
-.theme-academic-green .sidebar { background-color: #155724; }
-.theme-modern-dark .sidebar { background-color: #23272b; }
-.theme-vibrant-orange .sidebar { background-color: #c67605; }
-.theme-clean-purple .sidebar { background-color: #4d3d74; }
+.theme-corporate-blue #sidebar {
+    background-color: #004085;
+}
+
+.theme-corporate-blue #sidebar .nav-link.active {
+    background-color: #0056b3;
+}
+
+.theme-academic-green #sidebar {
+    background-color: #1e7e34;
+}
+
+.theme-academic-green #sidebar .nav-link.active {
+    background-color: #28a745;
+}
+
+.theme-modern-dark #sidebar {
+    background-color: #212529;
+}
+
+.theme-modern-dark #sidebar .nav-link.active {
+    background-color: #343a40;
+}
+
+.theme-vibrant-orange #sidebar {
+    background-color: #d35400;
+}
+
+.theme-vibrant-orange #sidebar .nav-link.active {
+    background-color: #e67e22;
+}
+
+.theme-clean-purple #sidebar {
+    background-color: #5a2d82;
+}
+
+.theme-clean-purple #sidebar .nav-link.active {
+    background-color: #6f42c1;
+}

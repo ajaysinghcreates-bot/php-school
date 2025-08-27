@@ -1,4 +1,4 @@
-<div class="sidebar">
+<div class="sidebar collapse" id="sidebar">
     <h3 class="text-white text-center mt-3">Naamu SMS</h3>
     <ul class="nav flex-column">
         <li class="nav-item">
@@ -44,7 +44,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="<?php echo SITE_URL; ?>/public/logout.php">
+            <a class="nav-link" href="<?php echo SITE_URL; ?>/logout.php">
                 <i class="fas fa-sign-out-alt"></i> Logout
             </a>
         </li>

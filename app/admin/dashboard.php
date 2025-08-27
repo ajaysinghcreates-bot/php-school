@@ -43,6 +43,21 @@ require_once __DIR__ . '/../../includes/sidebar.php';
     <h1 class="h3 mb-4 text-gray-800">Admin Dashboard</h1>
 
     <div class="row">
+        <div class="col-lg-4">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Quick Actions</h6>
+                </div>
+                <div class="card-body">
+                    <a href="<?php echo SITE_URL; ?>/app/admin/add_student.php" class="btn btn-primary btn-block mb-2">Add Student</a>
+                    <a href="<?php echo SITE_URL; ?>/app/admin/add_teacher.php" class="btn btn-primary btn-block mb-2">Add Teacher</a>
+                    <a href="<?php echo SITE_URL; ?>/app/admin/manage_classes.php#addClassModal" class="btn btn-primary btn-block">Add Class</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">

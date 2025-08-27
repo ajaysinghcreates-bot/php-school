@@ -62,7 +62,7 @@ $result = $conn->query("SELECT s.*, c.class_name, u.email, u.id as user_id FROM 
         <div class="alert alert-danger"><?php echo $error_message; ?></div>
     <?php endif; ?>
 
-    <a href="add_student.php" class="btn btn-primary mb-3">Add New Student</a>
+    <a href="<?php echo SITE_URL; ?>/app/admin/add_student.php" class="btn btn-primary mb-3">Add New Student</a>
 
     <div class="card shadow mb-4">
         <div class="card-header py-3">
@@ -90,7 +90,7 @@ $result = $conn->query("SELECT s.*, c.class_name, u.email, u.id as user_id FROM 
                                 <td><?php echo escape($row['roll_number']); ?></td>
                                 <td><?php echo escape($row['admission_date']); ?></td>
                                 <td>
-                                    <a href="edit_student.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-warning">Edit</a>
+                                    <a href="<?php echo SITE_URL; ?>/app/admin/edit_student.php?id=<?php echo $row['id']; ?>" class="btn btn-sm btn-warning">Edit</a>
                                     <a href="?delete_student=<?php echo $row['id']; ?>&user_id=<?php echo $row['user_id']; ?>" class="btn btn-sm btn-danger delete-student">Delete</a>
                                 </td>
                             </tr>

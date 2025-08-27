@@ -18,5 +18,5 @@ if (ini_get("session.use_cookies")) {
 // Finally, destroy the session.
 session_destroy();
 
-redirect(SITE_URL . '/public/index.php');
+redirect(SITE_URL . '/index.php');
 ?>
