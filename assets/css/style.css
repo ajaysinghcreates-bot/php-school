@@ -1,0 +1,42 @@
+body {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #343a40;
+    color: #fff;
+}
+
+.sidebar a {
+    color: #adb5bd;
+    padding: 15px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar a:hover, .sidebar a.active {
+    color: #fff;
+    background-color: #495057;
+}
+
+.sidebar a i {
+    margin-right: 10px;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    width: calc(100% - 250px);
+}
+
+/* Themes */
+.theme-corporate-blue .sidebar { background-color: #004085; }
+.theme-academic-green .sidebar { background-color: #155724; }
+.theme-modern-dark .sidebar { background-color: #23272b; }
+.theme-vibrant-orange .sidebar { background-color: #c67605; }
+.theme-clean-purple .sidebar { background-color: #4d3d74; }
